@@ -1,7 +1,15 @@
 <?php
+/**
+ * this declare we respect the types on our declarations.
+ */
+declare(strict_types=1);
 
-phpinfo();
+$foo = 'bar';
 
-echo '<pre>';
-print_r($_SERVER);
-echo '</pre>';
+$$foo = 'baz';
+
+$array = ["cook", 3, "sad"];
+
+echo "$foo, {$$foo} \n";
+
+var_dump($array);
